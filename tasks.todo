@@ -1,0 +1,12 @@
+Dependencies:
+    ✔ Tailwind @done (10/3/2024, 5:42:08 PM)
+    ✔ React Router @done (10/3/2024, 5:42:09 PM)
+    ✔ Contentful @done (10/3/2024, 5:42:23 PM)
+    ✔ env var @done (10/3/2024, 5:42:13 PM)
+    
+Tasks:
+    ✔ gitignore @done (10/3/2024, 4:55:34 PM)
+    ☐ create files ans folders
+    ☐ insert fonts
+    ☐ create global classes
+    ☐ modify manifest and index (public)
