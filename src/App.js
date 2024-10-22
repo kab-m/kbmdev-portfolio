@@ -1,16 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
-import { Homepage, NotFound } from "./pages/index";
+import { Homepage, NotFound, Other } from "./pages/index";
+import { NavBar, Loading } from "./components/index";
+import "./i18n";
+import useContentful from "./hooks/useContentful";
 
 function App() {
+  const { content, loading } = useContentful();
+
+  const [minLoadTime, setMinLoadTime] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setMinLoadTime(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading || !minLoadTime) {
+    return <Loading />;
+  }
+
+  // if (!content) {
+  //   // return error component here
+  // }
+
   return (
     <>
       <BrowserRouter>
-        {/* navbar */}
+        <NavBar />
         <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route path="/" element={<Homepage content={content} />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/other" element={<Other />} />
         </Routes>
+        {/* Footer */}
       </BrowserRouter>
     </>
   );

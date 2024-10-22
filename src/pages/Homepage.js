@@ -1,10 +1,16 @@
 import React from "react";
-import Test from "../components/Test";
+import {
+  HeroSection,
+  ContactsSection,
+  ProjectsSection,
+} from "../components/index";
 
-function Homepage() {
+function Homepage({ content }) {
   return (
     <div>
-      <Test />
+      <HeroSection content={content} />
+      <ProjectsSection content={content} />
+      <ContactsSection />
     </div>
   );
 }
