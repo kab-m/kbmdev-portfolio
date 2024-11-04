@@ -50,26 +50,26 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full min-h-[60px] py-4 px-10 z-[9999] bg-gradient-to-b from-black via-[#0000009a]">
+    <nav className="fixed top-0 left-0 w-full min-h-[50px] 2xl:py-4 lg:py-3 py-2 sm:px-10 px-5 z-[9999] bg-gradient-to-b from-[#DED1D1] dark:from-black dark:via-[#0000009a]">
       <div className="size-full flex justify-between items-center">
         <img
           src={images.logoDark}
           alt="Logo Dark"
-          className="h-auto 2xl:w-[200px] xl:w-[170px] lg:w-[150px] md:w-[130px] sm:w-[120px] w-[100px]"
+          className="h-auto 2xl:w-[150px] lg:w-[140px] md:w-[130px] sm:w-[120px] w-[100px] invert dark:invert-0"
         />
 
         <div className="flex gap-4">
           <Popover open={isOpen} onOpenChange={setIsOpen}>
             <PopoverTrigger onClick={() => setIsOpen(true)}>
-              <IoMenu size={40} color="white" />
+              <IoMenu size={40} className="text-black dark:text-white" />
             </PopoverTrigger>
 
-            <PopoverContent className="mr-10 bg-black border-red-700">
+            <PopoverContent className="border-red-700">
               <ul>
                 {sectionLinks.map((link) => (
                   <li
                     key={link.id}
-                    className="cursor-pointer py-3 text-center transition-all text-white hover:text-red-700"
+                    className="cursor-pointer py-3 text-center transition-all text-light-text-primary dark:text-dark-text-primary hover:text-red-700"
                   >
                     <ScrollLink
                       onClick={handlePopoverClose}
@@ -91,26 +91,26 @@ const NavBar = () => {
 
           <Popover>
             <PopoverTrigger>
-              <IoIosSettings size={40} color="white" />
+              <IoIosSettings size={40} className="text-black dark:text-white" />
             </PopoverTrigger>
 
-            <PopoverContent className="mr-10 bg-black border-red-700 ">
-              <div>
+            <PopoverContent className="border-red-700">
+              <div className="py-3 flex justify-center">
                 <span>Light</span>
                 <Switch
                   checked={isDarkMode}
                   onCheckedChange={handleThemeChange}
-                  className="custom-switch-class" // Add any custom class you want here
+                  className="custom-switch-class mx-4" // Add any custom class you want here
                 />
                 <span>Dark</span>
               </div>
 
-              <div>
+              <div className="py-3 flex justify-center">
                 <span>ENG</span>
                 <Switch
                   checked={isEnglish}
                   onCheckedChange={switchLanguage}
-                  className="custom-switch-class" // Add any custom class you want here
+                  className="custom-switch-class mx-4" // Add any custom class you want here
                 />
                 <span>ITA</span>
               </div>

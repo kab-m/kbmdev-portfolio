@@ -3,14 +3,18 @@ import {
   HeroSection,
   ContactsSection,
   ProjectsSection,
+  Footer,
 } from "../components/index";
 
 function Homepage({ content }) {
   return (
-    <div>
-      <HeroSection content={content} />
+    <div className="bg-[#DED1D1] dark:bg-[#0C0707]">
+      <HeroSection content={content} className="overflow-hidden" />
       <ProjectsSection content={content} />
-      <ContactsSection />
+      <ContactsSection>
+        {" "}
+        <Footer />
+      </ContactsSection>
     </div>
   );
 }

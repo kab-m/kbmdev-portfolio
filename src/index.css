@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -29,6 +30,10 @@ section {
   overflow: hidden;
 }
 
+.dropShadow {
+  filter: drop-shadow(5px 5px 150px var(--drop-shadow));
+}
+
 h1,
 h2 {
   /* font-family: "ArsenicaTrial", serif; */
@@ -36,8 +41,11 @@ h2 {
 }
 
 h1 {
-  font-size: clamp(2rem, 4vw, 4rem); /* 32px to 64px */
-  line-height: 1.2;
+  font-family: "Audiowide", sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem); /* 32px to 64px */
+  line-height: 1;
+  text-align: center;
+  color: var(--color-h1);
 }
 
 h2 {
@@ -110,6 +118,11 @@ p {
     --ring: 215 20.2% 65.1%;
 
     --radius: 0.5rem;
+
+    /* my styles */
+
+    --drop-shadow: #ede4e4;
+    --color-h1: #000;
   }
 
   .dark {
@@ -143,6 +156,10 @@ p {
     --ring: 216 34% 17%;
 
     --radius: 0.5rem;
+    /* my styles */
+
+    --drop-shadow: #181717;
+    --color-h1: #fff;
   }
 }
 

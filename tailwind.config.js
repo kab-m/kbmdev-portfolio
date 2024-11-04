@@ -12,6 +12,49 @@ module.exports = {
     },
     extend: {
       colors: {
+        light: {
+          bg: {
+            primary: "#FFFFFF",
+            secondary: "#F6F8FA",
+            tertiary: "#F6F8FA",
+            quartiary: "#DEE1E5",
+            button: "#F6F8FA",
+            hover: "#EAEDF0",
+          },
+          accent: {
+            border: "#D1D9E0",
+            active: "#FD8C73",
+            icon: "#59636E",
+            extra: "#0969DA",
+            extraBorder: "#0D5EC0",
+          },
+          text: {
+            primary: "#1F2328",
+            secondary: "#6B747E",
+            link: "#4493F8",
+          },
+        },
+        dark: {
+          bg: {
+            primary: "#0D1117",
+            secondary: "#010409",
+            tertiary: "#151B23",
+            quartiary: "#15191F",
+            button: "#212830",
+            hover: "#15191F",
+          },
+          accent: {
+            border: "#2F353D",
+            active: "#F78166",
+            icon: "#9198A1",
+            extra: "#238636",
+          },
+          text: {
+            primary: "#F0F6FC",
+            secondary: "#858C95",
+            link: "#4493F8",
+          },
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
