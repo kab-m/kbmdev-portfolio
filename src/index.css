@@ -42,14 +42,14 @@ h2 {
 
 h1 {
   font-family: "Audiowide", sans-serif;
-  font-size: clamp(2rem, 4vw, 3rem); /* 32px to 64px */
+  font-size: clamp(1.25rem, 4vw, 2.5rem);
   line-height: 1;
   text-align: center;
   color: var(--color-h1);
 }
 
 h2 {
-  font-size: clamp(1.625rem, 3vw, 3.125rem); /* 26px to 50px */
+  font-size: clamp(1rem, 4vw, 2rem);
   line-height: 1.15;
 }
 
@@ -170,5 +170,33 @@ p {
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .text-color {
+    @apply text-black dark:text-white;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply font-bold; /* Keeps the font bold */
+    font-size: 2rem; /* Default size for small screens */
+    @screen sm {
+      font-size: 2.5rem; /* Small screens (sm) */
+    }
+    @screen md {
+      font-size: 4rem; /* Large screens (lg) */
+    }
+    @screen lg {
+      font-size: 4rem; /* Large screens (lg) */
+    }
+    @screen xl {
+      font-size: 4rem; /* Large screens (lg) */
+    }
+    @screen 2xl {
+      font-size: 4rem; /* Large screens (lg) */
+    }
   }
 }

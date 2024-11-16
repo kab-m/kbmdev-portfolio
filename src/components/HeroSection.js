@@ -81,7 +81,7 @@ const HeroSection = ({ content }) => {
         ref={imageRef}
         src={heroImage}
         alt="Hero Image"
-        className={`md:mb-6 mb-10 2xl:w-[700px] xl:w-[600px] lg:w-[500px] sm:w-[400px] w-[300px] h-auto ${
+        className={`md:mb-6 mb-10 2xl:w-[600px] xl:w-[450px] lg:w-[400px] sm:w-[300px] w-[200px] h-auto ${
           isMobile && "dropShadow"
         }`}
         style={{ ...tiltStyle }}

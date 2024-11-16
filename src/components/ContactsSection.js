@@ -1,5 +1,5 @@
 import React from "react";
-
+import { RoundedContainer } from "../components/index";
 import { Footer } from "../components/index";
 
 const ContactsSection = () => {
@@ -8,10 +8,9 @@ const ContactsSection = () => {
       id="contacts-section"
       className="realtive flex flex-col min-h-screen"
     >
-      <div className="flex-1 flex justify-center items-center px-5 py-4">
-        {/* Main centered content */}
-        <p>ContactsSection</p>
-      </div>
+      <RoundedContainer>
+        <h2 className="text-black dark:text-white">Contacts Section</h2>
+      </RoundedContainer>
       <Footer className="absolute bottom-0 left-0 w-full" />
     </section>
   );
